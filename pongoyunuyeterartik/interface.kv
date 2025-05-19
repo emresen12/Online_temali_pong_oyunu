@@ -1,0 +1,88 @@
+<Button>:
+    background_color: 0, 0.5, 1, 1
+
+<MainMenu>:
+    FloatLayout:
+        Image:
+            source: "projearkaplanresmi.jpg"
+            allow_stretch: True
+            keep_ratio: False
+            size_hint: 1, 1
+            pos_hint: {"x": 0, "y": 0}
+        Label:
+            text: "Pong Game"
+            font_size: 40
+            pos_hint: {'center_x': 0.5, 'center_y': 0.74}
+        Button:
+            text: "Join Online Game"
+            size_hint: 0.3, 0.1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.56}
+            on_press: root.join_online_game()
+        Button:
+            text: "Start Server"
+            size_hint: 0.3, 0.1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.34}
+            on_press: root.start_server()
+        Button:
+            text: "History"
+            size_hint: 0.3, 0.1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.23}
+            on_press: root.show_all_match()
+        Button:
+            text: "Play Offline"
+            size_hint: 0.3, 0.1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.45}
+            on_press: root.playoffline()
+<HistoryScreen>:
+    FloatLayout:
+        size:root.width,root.height
+        Image:
+            source: "projearkaplanresmi.jpg"
+            allow_stretch: True
+            keep_ratio: False
+            size_hint: 1, 1
+            pos_hint: {"x": 0, "y": 0}
+        Label:
+            id:player1
+            text:"Player 1 wins = 0"
+            font_size:40
+            pos_hint:{'center_x': 0.5, 'center_y': 0.64}
+        Label:
+            id:player2
+            text:"Player 2 wins = 0"
+            font_size:40
+            pos_hint:{'center_x': 0.5, 'center_y': 0.54}
+        Button:
+            id:goback
+            text:"Go Back"
+            size_hint: 0.3, 0.1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.34}
+            background_color: 0, 0.5, 1, 1
+            on_press:root.go_back()
+<ChooseModeScreen>:
+    FloatLayout:
+        size:root.width,root.height
+        Image:
+            source: "projearkaplanresmi.jpg"
+            allow_stretch: True
+            keep_ratio: False
+            size_hint: 1, 1
+            pos_hint: {"x": 0, "y": 0}
+        Button:
+            text: "Normal Mode"
+            size_hint: 0.3, 0.1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.56}
+            on_press: root.startnormalmode()
+        Button:
+            text: "Galatasaray Mode"
+            size_hint: 0.3, 0.1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.45}
+            on_press: root.startgsmode()
+        Button:
+            text: "Fenerbahçe Mode"
+            size_hint: 0.3, 0.1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.34}
+            on_press: root.startfbmode()
+
+
+
